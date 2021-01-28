@@ -476,20 +476,23 @@ class _NewpagestateState extends State<Newpagestate> {
                         upload(context);
                       },
                       ),*/
-                              Container(
-                                width: 40,
+                              SizedBox(
+                                width: 60,
+                                 height: 32,
                                 child: FlatButton(
-                                  child: Text('下载'),
+                                  child: Text('下载', style: TextStyle(fontSize: 12),),
                                   onPressed: () {
                                     downloadFile(wordFiles[index]['fileUrl'],
                                         wordFiles[index]['fileName']);
                                   },
+                                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                 ),
                               ),
-                              Container(
-                                width: 40,
+                              SizedBox(
+                                width: 60,
+                                 height: 32,
                                 child: FlatButton(
-                                  child: Text('查看'),
+                                  child: Text('查看', style: TextStyle(fontSize: 12),),
                                   onPressed: () {
                                     /*createFileOfPdfUrl().then((f) {
                            setState(() {
@@ -535,7 +538,7 @@ class _NewpagestateState extends State<Newpagestate> {
                                       getrecord(wordFiles[index]['id'],
                                           wordFiles[index]['fileName']);
                                     },
-                                    child: Text('下载记录')),
+                                    child: Text('下载记录', style: TextStyle(fontSize: 12),)),
                               ),
                             ]),
                           )
