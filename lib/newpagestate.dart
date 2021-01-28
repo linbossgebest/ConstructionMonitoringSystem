@@ -485,7 +485,6 @@ class _NewpagestateState extends State<Newpagestate> {
                                     downloadFile(wordFiles[index]['fileUrl'],
                                         wordFiles[index]['fileName']);
                                   },
-                                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                 ),
                               ),
                               SizedBox(
