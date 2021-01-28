@@ -404,7 +404,12 @@ class _NewpagestateState extends State<Newpagestate> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Color.fromRGBO(237, 237, 237, 1)),
+      decoration: BoxDecoration(
+            image: DecorationImage(
+              image: ExactAssetImage("lib/images/background.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
       child: Column(
         children: <Widget>[
           Center(child: Text('文件资料')),
@@ -478,9 +483,12 @@ class _NewpagestateState extends State<Newpagestate> {
                       ),*/
                               SizedBox(
                                 width: 60,
-                                 height: 32,
+                                height: 32,
                                 child: FlatButton(
-                                  child: Text('下载', style: TextStyle(fontSize: 12),),
+                                  child: Text(
+                                    '下载',
+                                    style: TextStyle(fontSize: 12),
+                                  ),
                                   onPressed: () {
                                     downloadFile(wordFiles[index]['fileUrl'],
                                         wordFiles[index]['fileName']);
@@ -489,9 +497,12 @@ class _NewpagestateState extends State<Newpagestate> {
                               ),
                               SizedBox(
                                 width: 60,
-                                 height: 32,
+                                height: 32,
                                 child: FlatButton(
-                                  child: Text('查看', style: TextStyle(fontSize: 12),),
+                                  child: Text(
+                                    '查看',
+                                    style: TextStyle(fontSize: 12),
+                                  ),
                                   onPressed: () {
                                     /*createFileOfPdfUrl().then((f) {
                            setState(() {
@@ -537,7 +548,10 @@ class _NewpagestateState extends State<Newpagestate> {
                                       getrecord(wordFiles[index]['id'],
                                           wordFiles[index]['fileName']);
                                     },
-                                    child: Text('下载记录', style: TextStyle(fontSize: 12),)),
+                                    child: Text(
+                                      '下载记录',
+                                      style: TextStyle(fontSize: 12),
+                                    )),
                               ),
                             ]),
                           )
